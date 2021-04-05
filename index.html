@@ -36,7 +36,7 @@
         </div>
 
 
-        <div class="booking-form">
+        <div id=booking-form class="booking-form">
             <h3>Book Ocean Time</h3>
             <div class="input-group">
                 <label for="">Flying From</label>
@@ -60,9 +60,9 @@
                 <div>
                     <label for="">First Class ($150)</label>
                     <div style="display: flex;align-items: center;">
-                  <button id="fc-plus-btn" class="plus-minus-btn"><i class="fas fa-plus"></i></button>
+                  <button onclick="fcticket(true);" class="plus-minus-btn"><i class="fas fa-plus"></i></button>
                   <input id="fc-current-input" class="inp-style inp-width" type="number" value="0">
-                  <button id="fc-minus-btn" class="plus-minus-btn"><i class="fas fa-minus"></i></button>
+                  <button onclick="fcticket(false);" class="plus-minus-btn"><i class="fas fa-minus"></i></button>
                     </div>
                 </div>
             </div>
@@ -71,9 +71,9 @@
                 <div>
                     <label for="">Economy ($100)</label>
                      <div style="display: flex;align-items: center;">
-                  <button id="ec-plus-btn" class="plus-minus-btn"><i class="fas fa-plus"></i></button>  
+                  <button onclick="ecticket(true)" class="plus-minus-btn"><i class="fas fa-plus"></i></button>  
                   <input id="ec-current-input" class="inp-style inp-width" type="number" value="0">
-                  <button id="ec-minus-btn" class="plus-minus-btn"><i class="fas fa-minus"></i></button>
+                  <button onclick="ecticket(false)" class="plus-minus-btn"><i class="fas fa-minus"></i></button>
                     </div>
                 </div>
                 
@@ -84,7 +84,7 @@
                         <p>Subtotal</p>
                     </div>
                     <div class="right">
-                        <p>$ <span id=sub-Total>500</span></p>
+                        <p>$ <span id=sub-total>00</span></p>
                     </div>
                 </div>
 
@@ -102,11 +102,11 @@
                         <h4>Total</h4>
                     </div>
                     <div class="right">
-                        <p>$ <span id="total">500</span></p>
+                        <p>$ <span id="total">00</span></p>
                     </div>
                 </div>
             </div>
-            <button class="btn-style">Book Now</button>
+            <button id="booking-btn" class="btn-style">Book Now</button>
         </div>
     </main>
      <script src="script.js"></script>
