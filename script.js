@@ -1,34 +1,20 @@
-function fcticket(isIncrease) {
-  const fcCurrentInput = document.getElementById("fc-current-input");
-  const fcCurrentInputNumber = parseInt(fcCurrentInput.value);
-  let fcNewInput = fcCurrentInputNumber;
+function ticket(classname, isIncrease) {
+  const CurrentInput = document.getElementById(classname + "-current-input");
+  const CurrentInputNumber = parseInt(CurrentInput.value);
+  let NewInput = CurrentInputNumber;
   if (isIncrease == true) {
-    fcNewInput = fcCurrentInputNumber + 1;
+    NewInput = CurrentInputNumber + 1;
   }
-  if (isIncrease == false && fcCurrentInputNumber > 0) {
-    fcNewInput = fcCurrentInputNumber - 1;
+  if (isIncrease == false && CurrentInputNumber > 0) {
+    NewInput = CurrentInputNumber - 1;
   }
-  fcCurrentInput.value = fcNewInput;
+  CurrentInput.value = NewInput;
   calculateTotal();
 }
 
-function ecticket(isIncrease) {
-  const ecCurrentInput = document.getElementById("ec-current-input");
-  const ecCurrentInputNumber = parseInt(ecCurrentInput.value);
-  let ecNewInput = ecCurrentInputNumber;
-  if (isIncrease == true) {
-    ecNewInput = ecCurrentInputNumber + 1;
-  }
-  if (isIncrease == false && ecCurrentInputNumber > 0) {
-    ecNewInput = ecCurrentInputNumber - 1;
-  }
-  ecCurrentInput.value = ecNewInput;
-  calculateTotal();
-}
 // -------------------------------------------------------------------------
 
 function calculateTotal() {
-  // const ecInput = getInputValue();
   const ecCurrentInput = document.getElementById("ec-current-input");
   const ecCurrentInputNumber = parseInt(ecCurrentInput.value);
   const ecTicketPrice = ecCurrentInputNumber * 100;
