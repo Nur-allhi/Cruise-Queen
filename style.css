@@ -129,3 +129,8 @@ a.active {
   border: none;
   border-radius: 5px;
 }
+
+.success-promt {
+  border: 2px black solid;
+  background-color: cadetblue;
+}
