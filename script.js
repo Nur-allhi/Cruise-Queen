@@ -28,12 +28,8 @@ function calculateTotal() {
   const grandTotal = subTotal + vatOnSubtotal;
   document.getElementById("total").innerText = grandTotal;
 }
-// document.getElementById("booking-btn").addEventListener("click", function () {
-//   const bookingForm = document.getElementById("booking-form");
-//   bookingForm.style.display = "none";
-// });
 
-document.getElementById("sign-up-btn").addEventListener("click", function () {
-  const bookingForm = document.getElementById("booking-form");
-  bookingForm.style.display = "block";
-});
+// document.getElementById("sign-up-btn").addEventListener("click", function () {
+//   const bookingForm = document.getElementById("booking-form");
+//   bookingForm.style.display = "block";
+// });
